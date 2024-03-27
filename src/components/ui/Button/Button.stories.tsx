@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { Button } from "./Button";
+import { Activity } from "lucide-react";
 
 const meta = {
   title: "Example/Button",
@@ -20,3 +21,13 @@ export const Primary: Story = {
     children: "Primary",
   },
 };
+
+export const Secondary: Story = () => {
+  return (
+    <Button>
+      <Activity className="mr-2 h-4 w-4" /> Login with Email
+    </Button>
+  );
+};
+
+Secondary.storyName = "Secondary";
