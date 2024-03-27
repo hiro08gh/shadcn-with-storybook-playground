@@ -22,12 +22,10 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = () => {
-  return (
-    <Button>
+export const Secondary: Story = {
+  render: (args) => (
+    <Button {...args}>
       <Activity className="mr-2 h-4 w-4" /> Login with Email
     </Button>
-  );
+  ),
 };
-
-Secondary.storyName = "Secondary";
